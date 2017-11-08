@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Magic Calculator</title>
+    <style>
+        .axis--x path {
+            display: none;
+        }
+
+        .line {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 1.5px;
+        }
+        .axis path, .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+        path.line {
+            fill: none;
+            stroke-width: 1px;
+        }
+        .zoomOut {
+            fill: #66a;
+            cursor: pointer;
+        }
+        .zoomOutText {
+            pointer-events: none;
+            fill : #ccc;
+        }
+        .zoomOverlay {
+            pointer-events: all;
+            fill:none;
+        }
+        .band {
+            fill : none;
+            stroke-width: 1px;
+            stroke: red;
+        }
+    </style>
+    <!--<link rel="stylesheet" href="styles.css">--> <!-- webpack stylesheet output -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    <h2>График по реальным данным</h2>
+    <div class="main-chart"><svg width="960" height="500"></svg></div>
+    <h2>Несколько линий на одном графике</h2>
+    <svg width="960" height="500" class="multi"></svg>
+    <h2>Увеличение выделенной области</h2>
+    <div id="graph"></div>
+    <script src="output.js"></script> <!-- webpack javascript output -->
+</body>
+
+</html>
